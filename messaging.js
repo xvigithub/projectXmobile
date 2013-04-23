@@ -54,6 +54,7 @@
         $('#send').click(function () {
             var message = $('#message').val();
             SendMessage(chatHub, from, to, message);
+	    $('#message').val('');
         });
     });
 });
