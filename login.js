@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#signin').click(function () {
         $.ajax({
-            url: 'http://192.168.2.60:31234/api/login/',
+            url: 'http://192.168.0.104:31234/api/login/',
             type: 'POST',
             dataType: "json",
             data: {
