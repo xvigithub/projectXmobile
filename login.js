@@ -17,6 +17,8 @@
                 }
                 else { alert("Invalid login details."); }
             }
-        });
+        }).fail(function (e, a) {
+    		window.alert(e + " " +a);
+    	});
     });
 });
