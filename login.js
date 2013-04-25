@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#signin').click(function () {
         $.ajax({
-            url: 'http://192.168.0.104:31234/api/login/',
+        	url: 'http://192.168.2.60:12341/api/login/',
             type: 'POST',
             dataType: "json",
             data: {
@@ -17,8 +17,6 @@
                 }
                 else { alert("Invalid login details."); }
             }
-        }).fail(function (e, a) {
-    		window.alert(e + " " +a);
-    	});
+        });
     });
 });
