@@ -1,7 +1,7 @@
 ﻿$(document).bind('pageinit', function () {
     jQuery.support.cors = true;
 
-    $.connection.hub.url = 'http://192.168.2.60:12341/signalr';
+    $.connection.hub.url = 'http://192.168.2.60:22221/signalr';
 
     var chatHub = $.connection.chatHub;
 
@@ -13,7 +13,7 @@
         });
 
         $.ajax({
-        	url: 'http://192.168.2.60:12341/api/login/',
+        	url: 'http://192.168.2.60:22221/api/login/',
             type: 'GET',
             dataType: 'json',
             success: function (data) {
@@ -36,7 +36,7 @@
         $('.header h1').text(to);
 
         $.ajax({
-        	url: 'http://192.168.2.60:12341/api/chat/',
+        	url: 'http://192.168.2.60:22221/api/chat/',
         	type: 'POST',
         	dataType: 'json',
         	data: { From: to, To: from },
